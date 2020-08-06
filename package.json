@@ -1,0 +1,15 @@
+{
+  "name": "ghostieve-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Just a little type of feeling just a something for peeps that are trying to chill",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/deG3nt3lm4n/ghostieve-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
