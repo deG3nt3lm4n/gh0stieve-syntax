@@ -3,11 +3,18 @@
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
+// Theme specific vars
+@opacity: 0.8;
+@blur: 15px;
+@contrast: 200%;
+@saturation: 200%;
+
+
 // General colors
 @syntax-text-color: #fff;
-@syntax-cursor-color: @orange;
-@syntax-selection-color: lighten(#7d9aa6, 5%);
-@syntax-background-color: darken(hsl(234.6, 96%, 29.4%),27%);
+@syntax-cursor-color: @neon-yellow;
+@syntax-selection-color: lighten(@dark-gray, 10%);
+@syntax-background-color: darken(@dark-blue, 8%);
 
 // Guide colors
 @syntax-wrap-guide-color: @dark-gray;
@@ -19,10 +26,10 @@
 @syntax-result-marker-color-selected: white;
 
 // Gutter colors
-@syntax-gutter-text-color: @very-light-gray;
+@syntax-gutter-text-color: @neon-yellow;
 @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: @dark-gray;
-@syntax-gutter-background-color-selected: @gray;
+@syntax-gutter-background-color: darken(@dark-blue, 5%);
+@syntax-gutter-background-color-selected: darken(@dark-cyan, 8%);
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: @blue;
