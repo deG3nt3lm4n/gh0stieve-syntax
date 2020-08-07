@@ -11,3 +11,5 @@ Not the best but still trying hopefully by the end of this year things will look
 ![Xexy syntax theme](./img/imgv0-2-0.png)
 
 If you are wondering this is for html but feel like javascript looks better you tell me
+
+To be honest... looking for a friend... anyone want to code together?
