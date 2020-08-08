@@ -5,6 +5,7 @@ atom-text-editor {
   color: @syntax-text-color;
   -webkit-filter: contrast(@contrast);
   -webkit-filter: saturate(@saturation);
+
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
   }
@@ -36,7 +37,7 @@ atom-text-editor {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @pink;
+    color: @dark-green;
   }
 
   .invisible {
@@ -56,44 +57,40 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: lighten(@fruity-pink, 10%);
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 0px 0px @blur rgba(215, 40, 105, @opacity);
+  color: @chill-purple;
+  text-shadow: 0px 0px @blur rgba(146, 27, 127, @opacity)
 }
 
 .syntax--keyword {
-  color: @neon-cyan;
+  color: @rosey;
 
   &.syntax--control {
-    color: darken(@neon-cyan, 15%);
-    text-shadow: 0px 0px @blur rgba(1, 125, 255, @opacity);
+    color: @rosey;
   }
 
   &.syntax--operator {
-    color: @neon-cyan;
+    color: @dark-green;
   }
 
   &.syntax--other.syntax--special-method {
-    color: @light-blue;
+    color: @blue;
   }
 
   &.syntax--other.syntax--unit {
-    color: @neon-yellow;
+    color: @orange;
   }
 }
 
 .syntax--storage {
-  color: lighten(@dark-blue, 40%);
+  color: @tag-var;
+  text-shadow: 0px 0px @blur rgba(191, 35, 108, @opacity)
 }
 
 .syntax--constant {
-  color: lighten(@light-blue,10%);
-  font-weight: bold;
-  text-shadow: 0px 0px @blur rgba(2, 6, 97, @opacity);
+  color: @chill-orange;
 
   &.syntax--character.syntax--escape {
-    color: @neon-light-orange;
+    color: @dark-neon-cyan;
   }
 
   &.syntax--numeric {
@@ -101,7 +98,7 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--color {
-    color: @cyan;
+    color: @dark-neon-cyan;
   }
 
   &.syntax--other.syntax--symbol {
@@ -110,31 +107,29 @@ atom-text-editor {
 }
 
 .syntax--variable {
-  color: lighten(@darker-blue, 10%);
-  font-style: italic;
+  color: darken(@neon-yellow, 20%);
 
   &.syntax--interpolation {
-    color: darken(@neon-red, 10%);
+    color: darken(@red, 10%);
   }
 
   &.syntax--parameter.syntax--function {
-    color: darken(@neon-orange, 15%);
-    font-weight: bold;
-    text-shadow: 0px 0px @blur rgba(10, 10, 48, @opacity);
+    color: lighten(@light-purple, 10%);
+    text-shadow: 0px 0px @blur rgba(26, 33, 139, @opacity)
   }
 }
 
 .syntax--invalid.syntax--illegal {
-  background-color: @neon-red;
+  background-color: @red;
   color: @syntax-background-color;
 }
 
 .syntax--string {
-  color: rgba(170, 175, 235, 0.93);
-  text-shadow: 0px 0px @blur rgba(170, 175, 219, @opacity);
+  color: @tag-value;
+
 
   &.syntax--regexp {
-    color: @cyan;
+    color: @dark-neon-cyan;
 
     .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
@@ -149,14 +144,14 @@ atom-text-editor {
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
-      color: @light-gray;
+      color: @chill-purple;
     }
 
     &.syntax--string,
     &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
-      color: @dark-purple;
+      color: @syntax-text-color;
     }
 
     &.syntax--heading,
@@ -165,12 +160,12 @@ atom-text-editor {
     }
 
     &.syntax--bold {
-      color: @light-orange;
+      color: @d-orange;
       font-weight: bold;
     }
 
     &.syntax--italic {
-      color: @purple;
+      color: @rosey;
       font-style: italic;
     }
   }
@@ -183,11 +178,11 @@ atom-text-editor {
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @d-orange;
   }
 
-  &.syntax--function  {
-    color: @neon-cyan;
+  &.syntax--function {
+    color: @dark-neon-cyan;
 
     &.syntax--any-method {
       color: @blue;
@@ -197,19 +192,21 @@ atom-text-editor {
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: darken(@neon-yellow, 15%);
-    // text-shadow: 0px 0px @blur rgba(169, 35, 120, @opacity);
+    color: @blue;
   }
+
   &.syntax--name.syntax--type {
-    color: @dark-blue;
+    color: @d-orange;
     text-decoration: underline;
   }
 
   &.syntax--other.syntax--inherited-class {
     color: @green;
   }
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
+    color: @d-orange;
   }
 
   &.syntax--name.syntax--section {
@@ -217,13 +214,13 @@ atom-text-editor {
   }
 
   &.syntax--name.syntax--tag {
-    color: lighten(@dark-blue, 18%);
+    color: @tag-element;
     font-weight: bold;
+    font-style: italic;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: darken(@fruity-pink, 15%);
-    font-weight: 100;
+    color: @tag-attribute;
 
     &.syntax--id {
       color: @blue;
@@ -233,7 +230,7 @@ atom-text-editor {
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: #421977;
   }
 
   &.syntax--link {
@@ -245,12 +242,12 @@ atom-text-editor {
   }
 
   &.syntax--selector {
-    color: @purple;
+    color: @rosey;
   }
 
   &.syntax--separator {
-    background-color: @gray;
-    color: @neon-yellow;
+    background-color: @neon-cyan;
+    color: @syntax-text-color;
   }
 }
 
@@ -265,7 +262,7 @@ atom-text-editor {
   }
 
   &.syntax--changed {
-    color: @purple;
+    color: @rosey;
   }
 
   &.syntax--deleted {
@@ -273,7 +270,7 @@ atom-text-editor {
   }
 
   &.syntax--italic {
-    color: @purple;
+    color: @rosey;
     font-style: italic;
   }
 
@@ -300,10 +297,28 @@ atom-text-editor {
 
 .syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
+
   &.syntax--heading {
     color: @green;
   }
 }
+
+// custom
+.syntax--punctuation.syntax--definition.syntax--tag.syntax--html {
+  color: @open-close-tags;
+}
+
+.syntax--meta.syntax--tag.syntax--sgml.syntax--doctype.syntax--html {
+  color: @neon-red;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0px 0px @blur rgba(215, 40, 105, @opacity)
+}
+
+
+
+
+
 
 
 // Mini editor
